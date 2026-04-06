@@ -46,34 +46,21 @@
 - [x] Fix Nuxt 4 → Nuxt 3 downgrade (Windows IPC bug)
 
 ### 🔲 Remaining Phase 0 Tasks
-- [ ] **Initialize Sanity CMS project:**
-  ```bash
-  cd d:/vitesse-eco
-  mkdir cms && cd cms
-  npm create sanity@latest -- --project-id YOUR_ID --dataset production --template clean
-  ```
-  Then add SANITY_PROJECT_ID to .env file
+- [x] **Initialize Sanity CMS project:** Done — Project ID: `2jvnjf0c`, Org: `oWtjsSGlJ`
+  - Created organization "Vitesse Eco"
+  - Created project "Vitesse Eco" with dataset "production"
+  - Created all Sanity schemas (product, category, brand, promoCode, testimonial, singletons)
+  - Created desk structure with organized navigation
 
-- [ ] **Initialize Git repository:**
-  ```bash
-  cd d:/vitesse-eco
-  git init
-  git add .
-  git commit -m "Initial project setup: Nuxt 3 + Tailwind + i18n + Sanity"
-  ```
+- [x] **Initialize Git repository:** Done — initial commit 2a3b5f9
 
-- [ ] **Connect to GitHub:**
-  ```bash
-  gh repo create vitesse-eco --public --source=. --push
-  ```
+- [x] **Connect to GitHub:** Done — https://github.com/zmsaddi/vitesse-eco
 
-- [ ] **Deploy to Vercel:**
-  ```bash
-  npx vercel --yes
-  ```
-  Then connect custom domain vitesse-eco.com in Vercel dashboard
+- [x] **Deploy to Vercel:** Done — https://vitesse-eco.vercel.app
+  - Connected to GitHub repo automatically
+  - Next: connect custom domain vitesse-eco.com in Vercel dashboard
 
-- [ ] **Verify deployment:** Site loads on Vercel with all pages
+- [x] **Verify deployment:** Site deployed successfully on Vercel
 
 ---
 
