@@ -3,20 +3,10 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
 
-  // Fix IPC connection issue on Windows (Nuxt 4.4.x + Node 22)
-  vite: {
-    viteNode: {
-      maxRetryAttempts: 8,
-      baseRetryDelay: 150,
-      maxRetryDelay: 5000,
-      requestTimeout: 120000,
-    },
-    server: {
-      watch: {
-        usePolling: true,
-      },
-    },
-  },
+
+  // Fix IPC connection closed bug on Windows (Node 22+/24+)
+  // SSR disabled for local dev. Vercel builds with SSR on Linux (no IPC issue).
+  ssr: false,
 
   modules: [
     '@nuxtjs/tailwindcss',
@@ -45,7 +35,7 @@ export default defineNuxtConfig({
     defaultLocale: 'fr',
     strategy: 'prefix_except_default',
     lazy: true,
-    langDir: '../i18n/locales',
+    langDir: 'locales',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
@@ -65,7 +55,7 @@ export default defineNuxtConfig({
 
   // Pinia state management
   pinia: {
-    storesDirs: ['./app/stores/**'],
+    storesDirs: ['./stores/**'],
   },
 
   // Fonts
