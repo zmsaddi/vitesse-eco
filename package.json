@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "cld3-asm": "^4.0.0",
-    "franc-min": "^6.2.0"
+    "franc-min": "^6.2.0",
+    "sanity": "^5.19.0"
   }
 }

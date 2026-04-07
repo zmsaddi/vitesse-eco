@@ -45,9 +45,9 @@ export default defineNuxtConfig({
     },
   },
 
-  // Sanity CMS
+  // Sanity CMS (Studio is separate in cms/ folder, not loaded by Nuxt)
   sanity: {
-    projectId: process.env.SANITY_PROJECT_ID || '',
+    projectId: process.env.SANITY_PROJECT_ID || '2jvnjf0c',
     dataset: process.env.SANITY_DATASET || 'production',
     apiVersion: '2026-04-01',
     useCdn: true,
