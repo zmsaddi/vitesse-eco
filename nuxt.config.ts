@@ -5,8 +5,8 @@ export default defineNuxtConfig({
 
 
   // Fix IPC connection closed bug on Windows (Node 22+/24+)
-  // SSR disabled for local dev. Vercel builds with SSR on Linux (no IPC issue).
-  ssr: false,
+  // On Vercel (Linux): SSR works fine. Locally on Windows: disable SSR to avoid IPC crash.
+  ssr: process.env.VERCEL === '1',
 
   modules: [
     '@nuxtjs/tailwindcss',
